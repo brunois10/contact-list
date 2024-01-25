@@ -1,8 +1,12 @@
+import ContactList from './containers/ContactList'
+import GlobalStyles from './styles'
+
 function App() {
 
   return (
     <>
-    <h1>Teste</h1>
+    <GlobalStyles />
+    <ContactList />
     </>
   )
 }
