@@ -1,12 +1,13 @@
 import { Container } from "./styles"
-import Contacts from "../../components/contacts"
+import Contacts from "../../components/contacts/contacts"
 
 const ContactList = () => {
 
     return (
         <Container>
-            <Contacts>
-            </Contacts>
+            <Contacts/>
+            <Contacts/>
+            <Contacts/>
         </Container>
 
     )
