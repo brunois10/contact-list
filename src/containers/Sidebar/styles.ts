@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
-export const Aside = styled.aside`
+export const Header = styled.header`
     padding: 16px;
     background-color: #eee;
-    height: 100vh;
 `

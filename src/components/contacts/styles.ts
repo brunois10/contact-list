@@ -16,19 +16,18 @@ export const Status = styled.span`
     padding: 4px 8px;
     color: #fff;
     font-weight: bold;
-    font-size: 10px;
-    background-color: yellow;
+    font-size: 12px;
+    background-color: green;
     border-radius: 8px;
     margin-right: 16px;
-    display: inline-block;
 `
 export const Phone = styled.textarea`
     color: #8b8b8b;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 16px;
     font-family: 'Roboto Mono', monospace;
     display: block;
-    width: 100%;
+    width: 25%;
     margin-bottom: 16px;
     margin-top: 16px;
     resize: none;
@@ -37,10 +36,24 @@ export const Phone = styled.textarea`
 `
 
 export const EditButton = styled.button`
+    font-weight: bold;
+    font-size: 12px;
     background-color: black;
     color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: 8px;
 `
 export const DeleteButton = styled.button`
+    font-weight: bold;
+    font-size: 12px;
     background-color: red;
     color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: 8px;
 `

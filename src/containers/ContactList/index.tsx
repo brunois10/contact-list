@@ -6,8 +6,6 @@ const ContactList = () => {
     return (
         <Container>
             <Contacts/>
-            <Contacts/>
-            <Contacts/>
         </Container>
 
     )

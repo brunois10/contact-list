@@ -3,11 +3,9 @@ import FilterContact from '../../components/filterContact/filterContact'
 
 const SideBar = () => (
     <>
-    <S.Aside>
-        <div>
+    <S.Header>
             <FilterContact />
-        </div>
-    </S.Aside>
+    </S.Header>
     </>
 )
 

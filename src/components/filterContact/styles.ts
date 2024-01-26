@@ -15,15 +15,15 @@ export const Search = styled.input`
 export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 16px;
+    grid-gap: 8px;
     margin-top: 16px;
 `
 
 export const Card = styled.div`
     padding: 8px;
-    border: 1px solid blue;
+    border: 1px solid #5e5e5e;
     background-color: #fff;
-    color: blue;
+    color: #5e5e5e;
     border-radius: 8px;
     cursor: pointer;
 `
