@@ -7,7 +7,6 @@ const ContactList = () => {
         <Container>
             <Contacts/>
         </Container>
-
     )
 }
     

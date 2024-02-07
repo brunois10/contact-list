@@ -9,9 +9,11 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
     }
 `
-
-export const Container = styled.div`
-    display: block;
+export const Main = styled.div`
+    display: grid;
+    justify-content: center;
+    align-items: center;
 `
+
 
 export default GlobalStyles

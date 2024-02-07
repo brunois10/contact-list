@@ -3,15 +3,17 @@ import * as S from './styles'
 const FilterContact = () => {
     return (
         <>
-        <div>
-            <h1>Meus contatos</h1>
-            <p>+</p>
-            <p>add</p>
-            <p>apagar</p>
-            <S.Search placeholder='Pesquisar contato' />
+        <S.Header>
             <S.Container>
+            <S.Title>Meus contatos</S.Title>
+            <S.Actions>
+                <p>+</p>
+                <p>Edit</p>
+                <p>apagar</p>
+            </S.Actions>
             </S.Container>
-        </div>
+            <S.Search placeholder='Pesquisar contato' />
+        </S.Header>
         </>
     )
 }

@@ -1,37 +1,36 @@
 import styled from "styled-components"
 
-export const Search = styled.input`
-    display: inline-block;
-    text-align: start;
-    padding: 8px;
-    background-color: #fff;
-    border-radius: 8px;
-    font-weight: bold;
-    color: #666666;
-    border-color: #666666;
-    width: 100%;
+export const Header = styled.header`
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 `
 
 export const Container = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 8px;
-    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 40px 20px 40px;
 `
 
-export const Card = styled.div`
-    padding: 8px;
-    border: 1px solid #5e5e5e;
-    background-color: #fff;
-    color: #5e5e5e;
-    border-radius: 8px;
-    cursor: pointer;
-`
-export const Quantity = styled.span`
+export const Title = styled.h3`
+    font-size: 20px;
     font-weight: bold;
-    font-size: 24px;
-    display: block;
 `
-export const State = styled.span`
-    font-size: 14px;
+
+export const Actions = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+`
+
+export const Search = styled.input`
+    text-align: start;
+    padding: 16px 24px;
+    background-color: #24243D;
+    border-radius: 5px;
+    color: #E1E1E6;
+    width: 350px;
+    height: 40px;
+    margin-bottom: 40px;
 `
