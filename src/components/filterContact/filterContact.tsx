@@ -7,9 +7,9 @@ const FilterContact = () => {
             <S.Container>
             <S.Title>Meus contatos</S.Title>
             <S.Actions>
-                <p>+</p>
-                <p>Edit</p>
-                <p>apagar</p>
+                <img src="src/img/add.png" alt="" />
+                <img src="src/img/pencil.png" alt="" />
+                <img src="src/img/trash.png" alt="" />
             </S.Actions>
             </S.Container>
             <S.Search placeholder='Pesquisar contato' />

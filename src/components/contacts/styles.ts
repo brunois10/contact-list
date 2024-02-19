@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
-export const Section = styled.span`
-    border: 1px solid border;
-    background-color: yellow;
+export const Div = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
+export const Call = styled.img`
+    width: 52px;
+    height: 52px;
 `
 
 export const Card = styled.div`
@@ -22,7 +27,6 @@ export const Info = styled.textarea`
     color: #8C8CBA;
     font-size: 14px;
     line-height: 14px;
-    font-family: 'Roboto Mono', monospace;
     display: block;
     margin-bottom: 16px;
     resize: none;
