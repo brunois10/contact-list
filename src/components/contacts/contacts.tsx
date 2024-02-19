@@ -3,10 +3,11 @@ import * as S from './styles'
 const Contacts = () => {
     return (
         <>
+        <S.Section>B</S.Section>
         <S.Card>
             <S.Contact>Bruno Guimarães de Paula</S.Contact>
-            <S.Phone>(21)987670200</S.Phone>
-            <S.Phone>brunogdepaula@hotmail.com</S.Phone>
+            <S.Info>(21)987670200</S.Info>
+            <S.Info>brunogdepaula@hotmail.com</S.Info>
         </S.Card>
         </>
         )

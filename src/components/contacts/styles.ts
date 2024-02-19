@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
+export const Section = styled.span`
+    border: 1px solid border;
+    background-color: yellow;
+`
+
 export const Card = styled.div`
     display: grid;
     justify-content: center;
     align-items: center;
+    margin-left: 32px;
 `
 
 export const Contact = styled.h3`
@@ -12,10 +18,10 @@ export const Contact = styled.h3`
     margin-bottom: 16px;
 `
 
-export const Phone = styled.textarea`
-    color: #8b8b8b;
-    font-size: 16px;
-    line-height: 16px;
+export const Info = styled.textarea`
+    color: #8C8CBA;
+    font-size: 14px;
+    line-height: 14px;
     font-family: 'Roboto Mono', monospace;
     display: block;
     margin-bottom: 16px;
