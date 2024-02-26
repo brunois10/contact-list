@@ -1,3 +1,4 @@
+import React from 'react'
 import * as S from './styles'
 
 const Contacts = () => {
@@ -15,6 +16,6 @@ const Contacts = () => {
         )
 }
 
-    
+
 
 export default Contacts

@@ -1,18 +1,18 @@
-import NewContact from './components/newContact/newContact'
+import React from 'react'
 import ContactList from './containers/ContactList'
 import SideBar from './containers/Sidebar/sidebar'
 import GlobalStyles, { Main } from './styles'
+
 
 function App() {
 
   return (
     <>
-    <GlobalStyles />
-    <Main>
-      <SideBar />
-      <ContactList />
-      <NewContact />
-    </Main>
+      <GlobalStyles />
+      <Main>
+        <SideBar />
+        <ContactList />
+      </Main>
     </>
   )
 }
