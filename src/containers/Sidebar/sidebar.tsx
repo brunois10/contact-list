@@ -1,12 +1,20 @@
 import * as S from './styles'
 import FilterContact from '../../components/filterContact/filterContact'
+import React from 'react'
 
-const SideBar = () => (
+
+
+const SideBar = () => {
+
+  return(
     <>
     <S.Header>
-            <FilterContact />
+      <FilterContact />
     </S.Header>
     </>
-)
+
+  )
+}
+
 
 export default SideBar

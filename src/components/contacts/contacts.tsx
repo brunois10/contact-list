@@ -1,16 +1,26 @@
 import React from 'react'
 import * as S from './styles'
+import ContactClass from '../../models/Contact'
 
-const Contacts = () => {
+type Props = ContactClass
+
+
+const Contacts = ({
+  name,
+  number,
+  email
+}: Props) => {
+
+
     return (
         <>
         <S.Div>
-        <S.Call src='src/img/contact.png' alt='Imagem do contato'></S.Call>
-        <S.Card>
-            <S.Contact>Bruno Guimarães de Paula</S.Contact>
-            <S.Info>(21)987670200</S.Info>
-            <S.Info>brunogdepaula@hotmail.com</S.Info>
-        </S.Card>
+          <S.Call src='src/img/contact.png' alt='Imagem do contato'></S.Call>
+          <S.Card>
+              <S.Contact>{name}</S.Contact>
+              <S.Info>{number}</S.Info>
+              <S.Info>{email}</S.Info>
+          </S.Card>
         </S.Div>
         </>
         )

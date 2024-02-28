@@ -72,5 +72,6 @@ const contactSlice = createSlice({
 })
 
 
+export const { remove, edit, add } = contactSlice.actions
 
-export default contactSlice
+export default contactSlice.reducer
