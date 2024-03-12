@@ -24,8 +24,6 @@ export const Title = styled.h3`
 
 export const Actions = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 16px;
     cursor: pointer;
 `
 
@@ -44,4 +42,31 @@ export const Search = styled.input`
     &::placeholder {
         color: #E1E1E6;
     }
+`
+
+export const NewContact = styled.input`
+    color: #fff;
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
+    margin-bottom: 16px;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    width: 215px;
+`
+
+export const ButtonSubmit = styled.button`
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 16px;
+    background-color: transparent;
+    width: 215px;
+`
+
+export const DivForm = styled.div`
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
 `

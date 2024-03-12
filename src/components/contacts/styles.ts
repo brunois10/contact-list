@@ -5,9 +5,14 @@ export const Div = styled.div`
     justify-content: center;
 `
 
-export const Call = styled.img`
-    width: 52px;
-    height: 52px;
+export const Icons = styled.div`
+  display: grid;
+`
+
+export const Img = styled.img`
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
 `
 
 export const Card = styled.div`
@@ -15,12 +20,20 @@ export const Card = styled.div`
     justify-content: center;
     align-items: center;
     margin-left: 32px;
+    width: 215px;
 `
 
-export const Contact = styled.h3`
+export const Contact = styled.textarea`
+    color: #fff;
     font-size: 18px;
+    line-height: 14px;
     font-weight: bold;
+    display: block;
     margin-bottom: 16px;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    width: 215px;
 `
 
 export const Info = styled.textarea`
@@ -32,4 +45,5 @@ export const Info = styled.textarea`
     resize: none;
     border: none;
     background-color: transparent;
+    width: 215px;
 `

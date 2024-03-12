@@ -9,7 +9,7 @@ const initialState: ContactState = {
     itens: [
         {
             id: 1,
-            name: 'Bruno Guimarães de Paula',
+            name: 'Bruno Guimarães',
             number: '21987670200',
             email: 'brunogdepaula@hotmail.com'
         },
@@ -67,11 +67,17 @@ const contactSlice = createSlice({
                 id: lastContact ? lastContact.id + 1 : 1}
             state.itens.push(newContact)
             }
-        }
-    }
+        },
+        filterList: (state, action: PayloadAction<string>) => {
+          const searchTerm = action.payload.toLowerCase();
+          state.itens = state.itens.filter(contact =>
+              contact.name.toLowerCase().includes(searchTerm)
+          );
+      }
+      }
 })
 
 
-export const { remove, edit, add } = contactSlice.actions
+export const { remove, edit, add, filterList } = contactSlice.actions
 
 export default contactSlice.reducer

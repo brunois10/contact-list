@@ -8,6 +8,7 @@ import React from "react"
 const ContactList = () => {
   const { itens } = useSelector((state:  RootReducer) => state.contact)
 
+
     return (
         <Container>
           {itens.map((c) => (
