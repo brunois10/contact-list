@@ -13,6 +13,7 @@ const ContactList = () => {
         <Container>
           {itens.map((c) => (
               <Contacts
+              key={c.id}
               id={c.id}
               name={c.name}
               number={c.number}

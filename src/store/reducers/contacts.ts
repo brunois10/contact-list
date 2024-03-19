@@ -2,8 +2,9 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import Contact from "../../models/Contact";
 
 type ContactState = {
-    itens: Contact[]
-}
+    itens: Contact[];
+    filteredItens: Contact[];
+};
 
 const initialState: ContactState = {
     itens: [
@@ -13,7 +14,8 @@ const initialState: ContactState = {
             number: '21987670200',
             email: 'brunogdepaula@hotmail.com'
         },
-        {   id: 2,
+        {
+            id: 2,
             name: 'Fulano da Rocha',
             number: '21969740606',
             email: 'fumirandarocha@hotmail.com'
@@ -30,54 +32,60 @@ const initialState: ContactState = {
             number: '21978321264',
             email: 'lukinhadrigues@hotmail.com'
         }
-    ]
-}
-
+    ],
+    filteredItens: []
+};
 
 const contactSlice = createSlice({
     name: 'contact',
     initialState,
     reducers: {
         remove: (state, action: PayloadAction<number>) => {
-            state.itens = [
-            ...state.itens.filter((contact) => contact.id !== action.payload)
-            ]
+            state.itens = state.itens.filter((contact) => contact.id !== action.payload);
+            state.filteredItens = state.filteredItens.filter((contact) => contact.id !== action.payload);
         },
         edit: (state, action: PayloadAction<Contact>) => {
-            const indexContact = state.itens.findIndex(
-            (c) => c.id === action.payload.id
-            )
-            if (indexContact >= 0) {
-            state.itens[indexContact] = action.payload
+            const index = state.itens.findIndex((c) => c.id === action.payload.id);
+            if (index >= 0) {
+                state.itens[index] = action.payload;
+                // Atualizar o item correspondente na lista filtrada, se necessário
+                const filteredIndex = state.filteredItens.findIndex((c) => c.id === action.payload.id);
+                if (filteredIndex >= 0) {
+                    state.filteredItens[filteredIndex] = action.payload;
+                }
             }
         },
         add: (state, action: PayloadAction<Omit<Contact, 'id'>>) => {
-            const ContactExists = state.itens.find(
-            (contact) =>
-                contact.name.toLowerCase() === action.payload.name.toLowerCase()
-            )
+            const contactExists = state.itens.find(
+                (contact) =>
+                    contact.name.toLowerCase() === action.payload.name.toLowerCase()
+            );
 
-            if (ContactExists) {
-            alert('Já existe um contato com esse nome')
+            if (contactExists) {
+                alert('Já existe um contato com esse nome');
             } else {
-            const lastContact = state.itens[state.itens.length - 1]
-
-            const newContact = {
-                ...action.payload,
-                id: lastContact ? lastContact.id + 1 : 1}
-            state.itens.push(newContact)
+                const lastContact = state.itens[state.itens.length - 1];
+                const newContact = {
+                    ...action.payload,
+                    id: lastContact ? lastContact.id + 1 : 1
+                };
+                state.itens.push(newContact);
+                state.filteredItens.push(newContact); // Adicionar à lista filtrada também
             }
         },
         filterList: (state, action: PayloadAction<string>) => {
-          const searchTerm = action.payload.toLowerCase();
-          state.itens = state.itens.filter(contact =>
-              contact.name.toLowerCase().includes(searchTerm)
-          );
-      }
-      }
-})
+            const searchTerm = action.payload.trim().toLowerCase();
+            if (searchTerm === '') {
+                // Se o termo de pesquisa estiver vazio, restaurar a lista original
+                state.filteredItens = state.itens.slice();
+            } else {
+                state.filteredItens = state.itens.filter((contact) =>
+                    contact.name.toLowerCase().includes(searchTerm)
+                );
+            }
+        },
+    }
+});
 
-
-export const { remove, edit, add, filterList } = contactSlice.actions
-
-export default contactSlice.reducer
+export const { remove, edit, add, filterList } = contactSlice.actions;
+export default contactSlice.reducer;
